@@ -1,0 +1,20 @@
+meta {
+  name: Get Category
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/fetch/common/categories
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

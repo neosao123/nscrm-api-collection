@@ -1,0 +1,46 @@
+meta {
+  name: Store
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/leads/store
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "title": "Mr",
+    "lead_type": "customer",
+    "first_name": "Rohit",
+    "last_name": "Desai",
+    "client_id": 2,
+    "reference": "REF001",
+    "telephone": "9876543210",
+    "email": "rohit@email.com",
+    "company": "ABC Pvt Ltd",
+    "street": "Main Road",
+    "city": "Kolhapur",
+    "state": "Maharashtra",
+    "zip_code": "416502",
+    "country": "India",
+    "website": "https://abc.com/",
+    "gst": "27ABCDE1234F1Z5",
+    "notes": "Interested in premium plan",
+    "category": "Hot",
+    "tags": "flutter,crm",
+    "last_contacted": "2026-03-03"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
