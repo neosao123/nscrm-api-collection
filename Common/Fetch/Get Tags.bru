@@ -1,0 +1,27 @@
+meta {
+  name: Get Tags
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/fetch/common/tags
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:json {
+  {
+    "search":"",
+    "type":""
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
