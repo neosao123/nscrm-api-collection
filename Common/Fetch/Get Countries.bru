@@ -1,0 +1,20 @@
+meta {
+  name: Get Countries
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/fetch/common/countries
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
