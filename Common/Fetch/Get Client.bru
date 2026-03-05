@@ -1,11 +1,11 @@
 meta {
-  name: Get Countries
+  name: Get Client
   type: http
-  seq: 2
+  seq: 3
 }
 
 get {
-  url: {{baseUrl}}/fetch/common/countries
+  url: {{baseUrl}}/fetch/common/clients
   body: json
   auth: bearer
 }
@@ -16,12 +16,8 @@ auth:bearer {
 
 body:json {
   {
-  "search":""
+    "search":""
   }
-}
-
-body:multipart-form {
-  search: Aruba
 }
 
 settings {
