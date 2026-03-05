@@ -1,0 +1,24 @@
+meta {
+  name: Lead Refernces
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/fetch/common/lead-sources
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{authToken}}
+}
+
+body:multipart-form {
+  search: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
