@@ -1,13 +1,17 @@
 meta {
-  name: Get Tags
+  name: Get Lead List
   type: http
-  seq: 4
+  seq: 3
 }
 
 get {
-  url: {{baseUrl}}/fetch/common/tags
+  url: {{baseUrl}}/leads/list
   body: json
   auth: bearer
+}
+
+params:query {
+  : 
 }
 
 auth:bearer {
@@ -17,7 +21,7 @@ auth:bearer {
 body:json {
   {
     "search":"",
-    "type":"lead"
+    "page":"2"
   }
 }
 
